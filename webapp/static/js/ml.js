@@ -20,7 +20,8 @@ function updatePlotly() {
                     {title:"LinearSVR", field:"LinearSVR"},
                     {title:"RandomForestRegressor", field:"RandomForestRegressor"}
                 ]
-        });
+       
+            });
         
     });
 
