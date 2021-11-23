@@ -109,7 +109,7 @@ def bestprice():
 
         for i, e in enumerate(dp.entries):
             one_feed = {}
-            one_feed['Price'] = e.price if 'Price' in e else f'price {i}'
+            one_feed['Price'] = e.price if 'price' in e else f'price {i}'
             one_feed['Brand'] = e.brand if 'brand' in e else f'price {1}'
             one_feed['Address'] = e.address if 'address' in e else f'no address {i}'
             one_feed['Phone'] = e.phone if 'phone' in e else f'phone {i}'
@@ -134,7 +134,7 @@ def bestDLprice():
 
         for i, e in enumerate(dp.entries):
             one_feed = {}
-            one_feed['Price'] = e.price if 'Price' in e else f'price {i}'
+            one_feed['Price'] = e.price if 'price' in e else f'price {i}'
             one_feed['Brand'] = e.brand if 'brand' in e else f'price {1}'
             one_feed['Address'] = e.address if 'address' in e else f'no address {i}'
             one_feed['Phone'] = e.phone if 'phone' in e else f'phone {i}'
@@ -144,7 +144,7 @@ def bestDLprice():
     best_metro_dl_price = best_metro_dl_price.nsmallest(1, 'Price')
     best_metro_dl_price = best_metro_dl_price.nsmallest(1,'Price').drop(columns=['Address', 'Phone'])
     top_1 = best_metro_dl_price.to_json(orient='values')
-
+    print(top_1)
     return top_1
 
 @app.route("/mlpredict")
