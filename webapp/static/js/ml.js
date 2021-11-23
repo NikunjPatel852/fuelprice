@@ -1,13 +1,3 @@
-function ml() {
-
-    url = "https://public.tableau.com/views/map_16375814493070/Sheet1";
-        viz = new tableau.Viz(machine_learning_chart, url);
-
-};
-
-
-
-
 d3.selectAll("body").on(updatePlotly);
 
 function updatePlotly() {
@@ -34,7 +24,10 @@ function updatePlotly() {
         
     });
 
+    url = "https://public.tableau.com/views/map_16375814493070/Sheet1";
+    viz = new tableau.Viz(machine_learning_chart, url);
+
 };
 
 updatePlotly();
-ml();
+
