@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BizLand Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/favicon.png" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+
+  <!-- Adding needed scripts-->
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  
+  <!-- =======================================================
+  * Template Name: BizLand - v3.6.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="{{url_for('home')}}">Perth Fuel Gouge<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{{url_for('home')}}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('home')}}">About</a></li>
+          <li class="dropdown"><a href="#"><span>Analysis</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{url_for('story')}}">Data Story</a></li>
+              <li><a href="{{url_for('ml')}}">Machine Learning</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div id="mapupl"></div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              
+                <div id="final_score">
+                </div>
+              <h4 class="title"><div id="final_score1"></div></h4>
+              <p class="description">Average Price ULP Metro.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              
+              <h4 class="title"><div id="final_score2"></div></h4>
+              <p class="description">Average Price Diesel Metro. </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              
+              <h4 class="title"><div id="final_score3"></div></h4>
+              <p class="description">Cheapest ULP Metro</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              
+              <h4 class="title"><div id="final_score4"></div></h4>
+              <p class="description">Cheapest Diesel Metro.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <h3><span>Perth Fuel Gouge</span></h3>
+          <p>We aim to provided consumers access to fuel pricing and predicitons. </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="../static/img/company logs/logo_7_eleven.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>Keep your money in your bank – not in your tank!</h3>
+            <p class="fst-italic">
+              Perth Fuel Gouge is created based on the FuelWatch website an initiative of the Western Australian Government administered by the Department of Mines, Industry Regulation and Safety. FuelWatch was Australia’s first fuel price monitoring and reporting service that is backed by legislation ensuring its integrity. 
+              It is a unique service for Western Australian motorists, giving them the opportunity to potentially save hundreds of dollars a year by making informed fuel purchases.
+            </p>
+            <p class="fst-italic">
+              Perth Fuel Gouge builds on the FuelWatch website of increases price transparency and price certainty for motorists, and in so doing applies downward competitive pressure on prices. WA motorists can place further pressure on fuel retailers by using the price information from FuelWatch to buy from the cheaper retailers.  
+            </p>
+            <ul>
+              <li>
+                <i class="bx bx-store-alt"></i>
+                <div>
+                  <h5>The 24-Hour Rule</h5>
+                  <p>Throughout most of WA, fuel retailers are required to notify their next day's retail price for each type of fuel they sell by 2pm.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bx bx-images"></i>
+                <div>
+                  <h5>And There's More</h5>
+                  <p>FuelWatch also works behind the scenes to ensure retailers, wholesalers and oil companies comply with obligations under the Petroleum Products Pricing Act 1983 and the Petroleum Retailers Rights and Liabilities Act 1982.</p>
+                </div>
+              </li>
+            </ul>
+            <p>
+              The 24-hour rule - fixes fuel prices for 24 hours.
+              FuelWatch’s services - established the website, phone and email service plus initiated media segments about fuel prices.
+              Terminal Gate Price (TGP) - creates transparency in the wholesale fuel market.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1578" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Number of Fuel Stations</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="31" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Number of Brands</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Number of Regions</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Number of Suburbs</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Daily Newsletter</h4>
+            <p>Get your daily Perth Gouge Fuel report.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Perth Fuel Gouge<span>.</span></h3>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Perth Fuel Gouge</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/purecounter/purecounter.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+  <script src="../static/js/liveprice.js"></script>
+  <script src="../static/js/app.js"></script>
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</body>
+
+</html>

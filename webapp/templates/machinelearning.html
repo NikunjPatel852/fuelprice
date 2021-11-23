@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Machine Learning</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/favicon.png" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+
+  <!-- Adding needed scripts-->
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
+  <link href="https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- =======================================================
+  * Template Name: BizLand - v3.6.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+   <!-- ======= Header ======= -->
+   <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="{{url_for('home')}}">Perth Fuel Gouge<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{{url_for('home')}}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('home')}}">About</a></li>
+          <li class="dropdown"><a href="#"><span>Analysis</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{url_for('story')}}">Data Story</a></li>
+              <li><a href="{{url_for('ml')}}">Machine Learning</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade-up">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Machine Learning</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Machine Learning</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Introduction to ML  ======= -->
+    <section id="model1" class="model1">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h3><span>Exploring Fuel Price Predictions using Machine Learning</span></h3>
+        </div>
+          <div id="machine_learning_chart"></div>
+          <div>
+            <div>
+              <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center">
+                <br>
+                <h3>Using ULP price data for Metro perth to predict future prices.</h3>
+              </div>
+            </div>
+          </div>
+          <p class="fst-italic">
+            Conducting research around price prediction using different machine learning models significant resources and models where available for stock market
+            predictions, car price predictions and fuel consumption models. Unfortunately, no established models could be found to fit the data available from Fuelwatch.
+          </p>
+          <br>
+          <p class ="fst-italic">
+            As a result, using the data available the following 4 models were used to generated some predictions 
+          </p>
+          <p class="fst_italic">1. Liner 
+            <br>
+            Train Score: 0.003298101455164959
+            <br>
+            Test Score: 0.003596915033935
+            <br>
+            Mean Squared Error for training set: 341.64701731031835
+            <br> 
+            Mean Squared Error for test set: 340.06407443840635
+          </p>
+          <p class="fst_italic">2. LinearSVR
+            <br>
+            Train Score: 0.001354521999779812
+            <br>
+            Test Score: 0.0015997673595691264
+            <br>
+            Mean Squared Error for training set: 342.3132326800366
+            <br>
+            Mean Squared Error for test set: 340.74568430658854
+          </p>
+          <p class="fst_italic">3. LGBMRegressor
+            <br> 
+            Train Score: 0.6837293946536747
+            <br>
+            Test Score: 0.6836829830775832
+            <br>
+            Mean Squared Error for training set: 108.41045766768978
+            <Br>
+            Mean Squared Error for test set: 107.95636345556164
+          </p>
+          <p class="fst_italic">4. RandomForestRegressor
+            <br> 
+            Train Score: -0.45788511782113095
+            <br>
+            Test Score: -0.45786283413837103
+            <br> 
+            Mean Squared Error for training set: 499.7302631929179
+            <br>
+            Mean Squared Error for test set: 497.55644360163905
+          </p>
+          <br>
+          <br>
+          <div id="machinlearn-table"></div>
+      </div>
+    </section><!-- Introduction to ML Section -->
+
+    
+
+  </main><!-- End #main -->
+
+   <!-- ======= Footer ======= -->
+   <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Daily Newsletter</h4>
+            <p>Get your daily Perth Gouge Fuel report.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Perth Fuel Gouge<span>.</span></h3>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Perth Fuel Gouge</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/purecounter/purecounter.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+  <script src="../static/js/ml.js"></script>
+
+  <!--Addtional scripts-->
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
+  <link href="https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
+</body>
+
+</html>
