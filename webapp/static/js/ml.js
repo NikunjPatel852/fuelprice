@@ -5,7 +5,7 @@ function ml() {
 
 };
 
-ml();
+
 
 
 d3.selectAll("body").on(updatePlotly);
@@ -37,4 +37,4 @@ function updatePlotly() {
 };
 
 updatePlotly();
-
+ml();
