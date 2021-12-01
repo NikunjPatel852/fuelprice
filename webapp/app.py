@@ -70,6 +70,7 @@ def diesavmetro():
         
     dies['Price'] = pd.to_numeric(dies['Price'])
     dies_mean = pd.DataFrame(dies.mean(), columns=['Average ULP Perth Metro'])
+    dies_mean = dies_mean['Average ULP Perth Metro'].round(2)
     dies_mean = dies_mean.to_json(orient='values')
     
     return dies_mean
@@ -93,6 +94,7 @@ def ulpavmetro():
         
     ulp_metro['Price'] = pd.to_numeric(ulp_metro['Price'])
     ulp_mean = pd.DataFrame(ulp_metro.mean(), columns=['Average ULP Perth Metro'])
+    ulp_mean = ulp_mean['Average ULP Perth Metro'].round(2)
     ulp_mean = ulp_mean.to_json(orient='values')
     
     return ulp_mean
